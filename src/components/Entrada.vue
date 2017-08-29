@@ -51,7 +51,7 @@
 
 
 export default {
-  name: 'contenedor',
+  name: 'entrada',
   data() {      
     return {
         items: [],
@@ -219,5 +219,6 @@ li {
 .claseError {
     border-color: red;
 }
+
 
 </style>

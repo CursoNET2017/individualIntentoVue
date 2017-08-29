@@ -34,11 +34,9 @@ import pelicula from './Pelicula.vue'
 
 
 export default {
-  name: 'app',
+  name: 'contenedor',
   data() {
     return {
-      datos: {        
-      }
     }
   },
   components: {

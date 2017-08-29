@@ -32,6 +32,13 @@
             <input name="pais" type="text" placeholder="Introduce País" v-model="item.pais" v-on:input="validar" v-bind:class="{claseError: !valido.d}" class="form-control">
         </div>        
         <div class="ayudaInput"><small v-if="!valido.d" id="passwordHelpBlock" class="form-text text-muted"> Entre 0 y 30 caracteres.</small></div>
+        
+        <div id="botones" class="classCentrado">
+            <button id="buttonCrear" class="btn btn-success" v-on:click="crear" v-bind:disabled="editable || !valido.a || !valido.b || !valido.c || !valido.d">Añadir</button>
+            <button id="buttonActualizar" class="btn btn-success" v-on:click="actualizar" v-bind:disabled="!item.id || !valido.a || !valido.b || !valido.c || !valido.d">Actualizar</button>
+            <button id="buttonBorrar" class="btn btn-success" v-on:click="borrar" v-bind:disabled="!item.id">Borrar</button>
+        </div>
+    <!--
         <div  class="btn-group btn-group-justified">
             <div class="btn-group">
                 <button id="buttonCrear" class="btn btn-success" v-on:click="crear" v-bind:disabled="editable || !valido.a || !valido.b || !valido.c || !valido.d">Añadir</button>
@@ -43,6 +50,7 @@
                 <button id="buttonBorrar" class="btn btn-success" v-on:click="borrar" v-bind:disabled="!item.id">Borrar</button>
             </div>            
         </div>
+    -->
     </form>
 
   </div>
@@ -50,7 +58,7 @@
 
 <script>
 export default {
-  name: 'contenedor',
+  name: 'peliculas',
   data() {      
     return {
         items: [],
@@ -234,9 +242,10 @@ li {
 */
 .input-group{
     width: 60%;
+    margin-left: 20%;
 }
 .ayudaInput{
     height: 20px;
+    margin-left: 20%;
 }
-
 </style>
