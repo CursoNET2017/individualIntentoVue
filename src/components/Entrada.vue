@@ -153,7 +153,7 @@ export default {
                 debugger;
             },        
 		    complete : function(xhr, status) {
-		        alert('Creado '+titulo1+' con exito');
+		        //alert('Creado '+titulo1+' con exito');
 		        _this.getTodos();
 		    }
         });
@@ -179,7 +179,7 @@ export default {
 		     	debugger;
 		    },        
 		    complete : function(xhr, status) {
-		        alert('Actualización con exito');
+		        //alert('Actualización con exito');
 		        _this.getTodos();
 		    }
 	  	});
@@ -201,7 +201,7 @@ export default {
             },
             complete : function() {
                 _this.getTodos();
-                alert('Eliminado con exito '+titulo1);
+                //alert('Eliminado con exito '+titulo1);
             }
         })
     }    
