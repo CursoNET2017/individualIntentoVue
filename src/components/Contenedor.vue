@@ -8,8 +8,7 @@
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active classCentrado">
-      <h3>HOME</h3>
-      <p>Some content.</p>
+      <h3>¡Bienvenido!</h3>
     </div>
     <entrada id="menu1" class="tab-pane fade">
     </entrada>

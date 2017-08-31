@@ -16,22 +16,22 @@
             <input name="titulo" type="text" placeholder="Introduce Título" v-model="item.titulo" v-on:input="validar" v-bind:class="{claseError: !valido.a}" class="form-control">            
             <!--<span v-if="!valido.a" class="help-block">Entre 0 y 30 caracteres.</span> -->
         </div>
-        <div class="ayudaInput"><small v-if="!valido.a" id="passwordHelpBlock" class="form-text text-muted"> Entre 0 y 30 caracteres.</small></div>
+        <div class="ayudaInput"><small v-if="!valido.a" id="passwordHelpBlock" class="form-text text-danger"> Entre 0 y 30 caracteres.</small></div>
         <div class="input-group">
             <span class="input-group-addon">Director:</span>
             <input name="director" type="text" placeholder="Introduce Director" v-model="item.director" v-on:input="validar" v-bind:class="{claseError: !valido.b}" class="form-control">
         </div>
-        <div class="ayudaInput"><small v-if="!valido.b" id="passwordHelpBlock" class="form-text text-muted"> Entre 0 y 30 caracteres.</small></div>
+        <div class="ayudaInput"><small v-if="!valido.b" id="passwordHelpBlock" class="form-text text-danger"> Entre 0 y 30 caracteres.</small></div>
         <div class="input-group">
             <span class="input-group-addon">Duración:</span>
             <input name="duracion" type="number" placeholder="Introduce Duración" v-model="item.duracion" v-on:input="validar" v-bind:class="{claseError: !valido.c}" class="form-control">
         </div>    
-        <div class="ayudaInput"><small v-if="!valido.c" id="passwordHelpBlock" class="form-text text-muted"> Duración en minutos. Sin decimales.</small></div>
+        <div class="ayudaInput"><small v-if="!valido.c" id="passwordHelpBlock" class="form-text text-danger"> Duración en minutos. Sin decimales.</small></div>
         <div class="input-group">
             <span class="input-group-addon">País:</span>
             <input name="pais" type="text" placeholder="Introduce País" v-model="item.pais" v-on:input="validar" v-bind:class="{claseError: !valido.d}" class="form-control">
         </div>        
-        <div class="ayudaInput"><small v-if="!valido.d" id="passwordHelpBlock" class="form-text text-muted"> Entre 0 y 30 caracteres.</small></div>
+        <div class="ayudaInput"><small v-if="!valido.d" id="passwordHelpBlock" class="form-text text-danger"> Entre 0 y 30 caracteres.</small></div>
         
         <div id="botones" class="classCentrado">
             <button id="buttonCrear" class="btn btn-success" v-on:click="crear" v-bind:disabled="editable || !valido.a || !valido.b || !valido.c || !valido.d">Añadir</button>
@@ -225,7 +225,7 @@ li {
     list-style-type: none;
 }
 .claseError {
-    border-color: red;
+    border-color: #a94442;
 }
 .classCentrado {
     text-align: center;
@@ -246,6 +246,6 @@ li {
 }
 .ayudaInput{
     height: 20px;
-    margin-left: 20%;
+    margin-left: 20%;    
 }
 </style>

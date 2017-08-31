@@ -24,19 +24,25 @@
             <div class="col-sm-10">
                 <input name="titulo" type="text" placeholder="Introduce Título" v-model="item.titulo" v-on:input="validar" class="form-control" v-bind:class="{claseError: !valido.a}">
             </div>
+            <div class="ayudaInput"><small v-if="!valido.a" id="passwordHelpBlock" class="form-text text-danger"> Entre 0 y 30 caracteres.</small></div>
         </div>
+         <div class="ayudaInput"></div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Fila: </label>
             <div class="col-sm-10">
                 <input name="fila" type="number" placeholder="Introduce Fila" v-model="item.fila" v-on:input="validar" class="form-control" v-bind:class="{claseError: !valido.b}">
             </div>
+            <div class="ayudaInput"><small v-if="!valido.b" id="passwordHelpBlock" class="form-text text-danger"> Número entero positivo.</small></div>
         </div>
+        <div class="ayudaInput"></div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Butaca: </label>
             <div class="col-sm-10">
                 <input name="butaca" type="number" placeholder="Introduce Butaca" v-model="item.butaca" v-on:input="validar" class="form-control" v-bind:class="{claseError: !valido.c}">
             </div>
-        </div>        
+            <div class="ayudaInput"><small v-if="!valido.c" id="passwordHelpBlock" class="form-text text-danger"> Número entero positivo.</small></div>
+        </div>   
+        <div class="ayudaInput"></div>     
         <div id="botones" class="classCentrado">
             <button id="buttonCrear" v-on:click="crear" v-bind:disabled="editable || !valido.a || !valido.b || !valido.c" class="btn btn-info btn-responsive btninter">Añadir</button>
             <button id="buttonActualizar" v-on:click="actualizar" v-bind:disabled="!item.id || !valido.a || !valido.b || !valido.c" class="btn btn-info btn-responsive btninter">Actualizar</button>
@@ -217,8 +223,11 @@ li {
     list-style-type: none;
 }
 .claseError {
-    border-color: red;
+    border-color: #a94442;
 }
-
+.ayudaInput{
+    height: 20px;
+    margin-left: 20%;
+}
 
 </style>

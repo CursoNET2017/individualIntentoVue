@@ -5,13 +5,13 @@
             <button type="button" class="btn btn-primary btn-lg" v-on:click="cambiarContenido(1)">Entradas</button>
             <button type="button" class="btn btn-primary btn-lg" v-on:click="cambiarContenido(2)">Peliculas</button>            
         </div>
-    </div>  
+    </div>     
 </template>
 
 <script>
 export default {
   name: 'pestanas',
-  props: ['ventana'],//props en los hijos
+  //props: ['ventana'],//props en los hijos. En este caso Pestañas no lo usa para nada
   data() {
     return {      
     }    
